@@ -3,7 +3,6 @@ services:
   watchdog:
     image: hispanostation14/watchdog
     ports:
-      - 5000:5000
       - 1212:1212
       - 1212:1212/udp
     volumes:

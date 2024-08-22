@@ -20,7 +20,7 @@ Serilog:
   #  Name: "Test"
 
 # Important if using Git update method
-BaseUrl: "http://localhost:5000/"
+BaseUrl: "http://0.0.0.0:1212/"
 
 AllowedHosts: "*"
 
