@@ -1,0 +1,33 @@
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+# GitHub recommends pinning actions to a commit SHA.
+# To get a newer version, you will need to update the SHA.
+# You can also reference a tag or branch, but the action may change without warning.
+
+name: Deploy
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  deploy_server:
+    name: Deploy server
+    runs-on: self-hosted
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+      - name: Replace variables
+        run: |
+          ESTACION_CARPA_API_TOKEN=`tr -dc A-Za-z0-9 </dev/urandom | head -c 16 ; echo ''`
+          sed -i 's@${ESTACION_CARPA_API_TOKEN}@'"$ESTACION_CARPA_API_TOKEN"'@' ./configuration/appsettings.yml
+      - name: Run Docker Compose
+        run: |
+          docker compose pull
+          docker compose down
+          docker compose up -d

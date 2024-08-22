@@ -28,7 +28,7 @@ Servers:
   Instances:
     estacion_carpa: # ID of your server.
       Name: "Estacion Carpa" # Name of the server - Note that this is NOT the name of the server on the hub, that is set for each server under game.hostname in their respective config.toml files.
-      ApiToken: "${HISPANO_STATION_14_API_TOKEN}" # A secret password that you make up (API token) for the watchdog to control this server (e.g. update, restart)
+      ApiToken: "${ESTACION_CARPA_API_TOKEN}" # A secret password that you make up (API token) for the watchdog to control this server (e.g. update, restart)
       ApiPort: 1212 # API port OF THE GAME SERVER. This has to match the 1212 HTTP status API (described below). Otherwise the watchdog can't contact the game server for stuff.
 
       EnvironmentVariables:
