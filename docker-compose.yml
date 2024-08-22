@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  watchdog:
+    image: hispanostation14/watchdog
+    ports:
+      - 5000:5000
+      - 1212:1212
+      - 1212:1212/udp
+    volumes:
+      - ./configuration/appsettings.yml:/app/appsettings.yml
+      - ./configuration/estacion_carpa/config.toml:/app/instances/hispano_station14/config.toml
+      - /estacion_carpa/data/instances:/app/instances

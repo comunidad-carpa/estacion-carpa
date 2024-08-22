@@ -1,0 +1,44 @@
+Serilog:
+  Using: ["Serilog.Sinks.Console", "Serilog.Sinks.Loki"]
+  MinimumLevel:
+    Default: Information
+    Override:
+      SS14: Debug
+      Microsoft: "Warning"
+      Microsoft.Hosting.Lifetime: "Information"
+      Microsoft.AspNetCore: Warning
+
+  WriteTo:
+    - Name: Console
+      Args:
+        OutputTemplate: "[{Timestamp:HH:mm:ss} {Level:u3} {SourceContext}] {Message:lj}{NewLine}{Exception}"
+
+  #Enrich: [ "FromLogContext" ]
+
+  #Loki:
+  #  Address: "http://localhost:3100"
+  #  Name: "Test"
+
+# Important if using Git update method
+BaseUrl: "http://localhost:5000/"
+
+AllowedHosts: "*"
+
+Servers:
+  Instances:
+    estacion_carpa: # ID of your server.
+      Name: "Estacion Carpa" # Name of the server - Note that this is NOT the name of the server on the hub, that is set for each server under game.hostname in their respective config.toml files.
+      ApiToken: "${HISPANO_STATION_14_API_TOKEN}" # A secret password that you make up (API token) for the watchdog to control this server (e.g. update, restart)
+      ApiPort: 1212 # API port OF THE GAME SERVER. This has to match the 1212 HTTP status API (described below). Otherwise the watchdog can't contact the game server for stuff.
+
+      EnvironmentVariables:
+        DOTNET_TieredPGO: 1
+        DOTNET_TC_QuickJitForLoops: 1
+        DOTNET_ReadyToRun: 0
+
+      UpdateType: "Git"
+      Updates:
+        BaseUrl: "https://github.com/xRankstrail/space-station-14"
+        Branch: "master"
+        HybridACZ: true
+      TimeoutSeconds: 120
