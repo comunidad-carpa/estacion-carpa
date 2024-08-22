@@ -8,5 +8,5 @@ services:
       - 1212:1212/udp
     volumes:
       - ./configuration/appsettings.yml:/app/appsettings.yml
-      - ./configuration/estacion_carpa/config.toml:/app/instances/hispano_station14/config.toml
+      - ./configuration/estacion_carpa/config.toml:/app/instances/estacion_carpa/config.toml
       - /estacion_carpa/data/instances:/app/instances
