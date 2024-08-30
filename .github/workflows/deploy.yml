@@ -26,8 +26,8 @@ jobs:
         run: |
           ESTACION_CARPA_API_TOKEN=`tr -dc A-Za-z0-9 </dev/urandom | head -c 16 ; echo ''`
           sed -i 's@${ESTACION_CARPA_API_TOKEN}@'"$ESTACION_CARPA_API_TOKEN"'@' ./configuration/appsettings.yml
-          sed -i 's@${DISCORD_ROUND_UPDATE_WEBHOOK}@'"$DISCORD_ROUND_UPDATE_WEBHOOK"'@' ./configuration/hispano_station14/config.toml
-          sed -i 's@${DISCORD_AHELP_WEBHOOK}@'"$DISCORD_AHELP_WEBHOOK"'@' ./configuration/hispano_station14/config.toml
+          sed -i 's@${DISCORD_ROUND_UPDATE_WEBHOOK}@'"$DISCORD_ROUND_UPDATE_WEBHOOK"'@' ./configuration/estacion_carpa/config.toml
+          sed -i 's@${DISCORD_AHELP_WEBHOOK}@'"$DISCORD_AHELP_WEBHOOK"'@' ./configuration/estacion_carpa/config.toml
           sed -i 's@${DISCORD_BOT_TOKEN}@'"$DISCORD_BOT_TOKEN"'@' ./docker-compose.yml
         env:
           DISCORD_ROUND_UPDATE_WEBHOOK: ${{ secrets.DISCORD_ROUND_UPDATE_WEBHOOK }}
