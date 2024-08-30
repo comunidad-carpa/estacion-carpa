@@ -114,7 +114,7 @@ ahelp_webhook = "${DISCORD_AHELP_WEBHOOK}"
 arrivals_returns = false
 
 [replay]
-auto_record = true
+auto_record = false
 
 [vote]
 enabled = true
