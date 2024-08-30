@@ -32,12 +32,12 @@ enabled = true
 # connectaddress = "udp://localhost:1212"
 
 [game]
-hostname = "[ES] Estación Carpa: Rol hispano (Esta vez con menos lag)"
+hostname = "[ES] Estación Carpa: Rol hispano"
 role_timers = false
-map = "Omega"
+map = "Saltern"
 desc = "¡Entra al servidor de rol hispanohablante en SS14! Para saber más: únete a nuestro Discord"
-soft_max_players = 100
-max_players = 100
+soft_max_players = 50
+max_players = 50
 
 [console]
 # If this is true, people connecting from this machine (loopback)
