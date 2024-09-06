@@ -7,10 +7,9 @@ services:
       - 1212:1212/udp
     volumes:
       - ./configuration/appsettings.yml:/app/appsettings.yml
-      - ./configuration/estacion_carpa/config.toml:/app/instances/estacion_carpa/config.toml
       - /estacion_carpa/data/instances:/app/instances
+      - ./configuration/estacion_carpa/config.toml:/app/instances/estacion_carpa/config.toml
       - ./configuration/estacion_carpa_goob/config.toml:/app/instances/estacion_carpa_goob/config.toml
-      - /estacion_carpa_goob/data/instances:/app/instances
   # status_discord_bot:
   #   image: hispanostation14/ss14-status-discord-bot
   #   environment:
