@@ -11,8 +11,8 @@ services:
       - /estacion_carpa/data/instances:/app/instances
       - ./configuration/estacion_carpa_goob/config.toml:/app/instances/estacion_carpa_goob/config.toml
       - /estacion_carpa_goob/data/instances:/app/instances
-  status_discord_bot:
-    image: hispanostation14/ss14-status-discord-bot
-    environment:
-      DISCORD_BOT_TOKEN: ${DISCORD_BOT_TOKEN}
-      SERVER_STATUS_ENDPOINT: http://watchdog:1212/status
+  # status_discord_bot:
+  #   image: hispanostation14/ss14-status-discord-bot
+  #   environment:
+  #     DISCORD_BOT_TOKEN: ${DISCORD_BOT_TOKEN}
+  #     SERVER_STATUS_ENDPOINT: http://watchdog:1212/status
