@@ -10,6 +10,7 @@ services:
       - /estacion_carpa/data/instances:/app/instances
       - ./configuration/estacion_carpa/config.toml:/app/instances/estacion_carpa/config.toml
       - ./configuration/estacion_carpa_goob/config.toml:/app/instances/estacion_carpa_goob/config.toml
+      - ./configuration/estacion_carpa_syndicate/config.toml:/app/instances/estacion_carpa_syndicate/config.toml
   status_discord_bot:
     image: hispanostation14/ss14-status-discord-bot
     environment:
