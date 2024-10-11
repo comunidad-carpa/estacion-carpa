@@ -67,7 +67,7 @@ Servers:
 
       UpdateType: "Git"
       Updates:
-        BaseUrl: "https://github.com/Eagle-0/Syndicate-Station"
+        BaseUrl: "https://github.com/xRankstrail/Syndicate-Station"
         Branch: "master"
         HybridACZ: true
       TimeoutSeconds: 120
