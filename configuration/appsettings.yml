@@ -26,21 +26,21 @@ AllowedHosts: "*"
 
 Servers:
   Instances:
-    # estacion_carpa: # ID of your server.
-    #   Name: "Estacion Carpa" # Name of the server - Note that this is NOT the name of the server on the hub, that is set for each server under game.hostname in their respective config.toml files.
-    #   ApiToken: "${ESTACION_CARPA_API_TOKEN}" # A secret password that you make up (API token) for the watchdog to control this server (e.g. update, restart)
-    #   ApiPort: 1212 # API port OF THE GAME SERVER. This has to match the 1212 HTTP status API (described below). Otherwise the watchdog can't contact the game server for stuff.
+    estacion_carpa: # ID of your server.
+      Name: "Estacion Carpa" # Name of the server - Note that this is NOT the name of the server on the hub, that is set for each server under game.hostname in their respective config.toml files.
+      ApiToken: "${ESTACION_CARPA_API_TOKEN}" # A secret password that you make up (API token) for the watchdog to control this server (e.g. update, restart)
+      ApiPort: 1212 # API port OF THE GAME SERVER. This has to match the 1212 HTTP status API (described below). Otherwise the watchdog can't contact the game server for stuff.
 
-    #   EnvironmentVariables:
-    #     DOTNET_TieredPGO: 1
-    #     DOTNET_TC_QuickJitForLoops: 1
-    #     DOTNET_ReadyToRun: 0
+      EnvironmentVariables:
+        DOTNET_TieredPGO: 1
+        DOTNET_TC_QuickJitForLoops: 1
+        DOTNET_ReadyToRun: 0
 
-    #   UpdateType: "Manifest"
-    #   Updates:
-    #     ManifestUrl: "https://wizards.cdn.spacestation14.com/fork/wizards/manifest"
+      UpdateType: "Manifest"
+      Updates:
+        ManifestUrl: "https://wizards.cdn.spacestation14.com/fork/wizards/manifest"
 
-    #   TimeoutSeconds: 60
+      TimeoutSeconds: 60
     # estacion_carpa_goob: # ID of your server.
     #   Name: "Estacion Carpa Goob" # Name of the server - Note that this is NOT the name of the server on the hub, that is set for each server under game.hostname in their respective config.toml files.
     #   ApiToken: "${ESTACION_CARPA_API_TOKEN}" # A secret password that you make up (API token) for the watchdog to control this server (e.g. update, restart)
@@ -55,19 +55,19 @@ Servers:
     #   Updates:
     #     ManifestUrl: "https://cdn.networkgamez.com/fork/goobstation/manifest"
     #   TimeoutSeconds: 120
-    estacion_carpa_syndicate: # ID of your server.
-      Name: "Estacion Carpa Syndicate" # Name of the server - Note that this is NOT the name of the server on the hub, that is set for each server under game.hostname in their respective config.toml files.
-      ApiToken: "${ESTACION_CARPA_API_TOKEN}" # A secret password that you make up (API token) for the watchdog to control this server (e.g. update, restart)
-      ApiPort: 1212 # API port OF THE GAME SERVER. This has to match the 1212 HTTP status API (described below). Otherwise the watchdog can't contact the game server for stuff.
+    # estacion_carpa_syndicate: # ID of your server.
+    #   Name: "Estacion Carpa Syndicate" # Name of the server - Note that this is NOT the name of the server on the hub, that is set for each server under game.hostname in their respective config.toml files.
+    #   ApiToken: "${ESTACION_CARPA_API_TOKEN}" # A secret password that you make up (API token) for the watchdog to control this server (e.g. update, restart)
+    #   ApiPort: 1212 # API port OF THE GAME SERVER. This has to match the 1212 HTTP status API (described below). Otherwise the watchdog can't contact the game server for stuff.
 
-      EnvironmentVariables:
-        DOTNET_TieredPGO: 1
-        DOTNET_TC_QuickJitForLoops: 1
-        DOTNET_ReadyToRun: 0
+    #   EnvironmentVariables:
+    #     DOTNET_TieredPGO: 1
+    #     DOTNET_TC_QuickJitForLoops: 1
+    #     DOTNET_ReadyToRun: 0
 
-      UpdateType: "Git"
-      Updates:
-        BaseUrl: "https://github.com/xRankstrail/Syndicate-Station"
-        Branch: "master"
-        HybridACZ: true
-      TimeoutSeconds: 120
+    #   UpdateType: "Git"
+    #   Updates:
+    #     BaseUrl: "https://github.com/xRankstrail/Syndicate-Station"
+    #     Branch: "master"
+    #     HybridACZ: true
+    #   TimeoutSeconds: 120
