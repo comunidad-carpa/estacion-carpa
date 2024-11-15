@@ -1,18 +1,18 @@
 version: "3.8"
 services:
-  watchdog:
-    image: hispanostation14/watchdog
-    ports:
-      - 1212:1212
-      - 1212:1212/udp
-    volumes:
-      - ./configuration/appsettings.yml:/app/appsettings.yml
-      - /estacion_carpa/data/instances:/app/instances
-      - ./configuration/estacion_carpa/config.toml:/app/instances/estacion_carpa/config.toml
-      - ./configuration/estacion_carpa_goob/config.toml:/app/instances/estacion_carpa_goob/config.toml
-      - ./configuration/estacion_carpa_syndicate/config.toml:/app/instances/estacion_carpa_syndicate/config.toml
+  # watchdog:
+  #   image: hispanostation14/watchdog
+  #   ports:
+  #     - 1212:1212
+  #     - 1212:1212/udp
+  #   volumes:
+  #     - ./configuration/appsettings.yml:/app/appsettings.yml
+  #     - /estacion_carpa/data/instances:/app/instances
+  #     - ./configuration/estacion_carpa/config.toml:/app/instances/estacion_carpa/config.toml
+  #     - ./configuration/estacion_carpa_goob/config.toml:/app/instances/estacion_carpa_goob/config.toml
+  #     - ./configuration/estacion_carpa_syndicate/config.toml:/app/instances/estacion_carpa_syndicate/config.toml
   status_discord_bot:
     image: hispanostation14/ss14-status-discord-bot
     environment:
       DISCORD_BOT_TOKEN: ${DISCORD_BOT_TOKEN}
-      SERVER_STATUS_ENDPOINT: http://watchdog:1212/status
+      SERVER_STATUS_ENDPOINT: http://0.0.0.0:1212/status
