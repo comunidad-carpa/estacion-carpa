@@ -38,6 +38,7 @@ map = "Saltern"
 desc = "¡Entra al servidor de rol hispanohablante en SS14! Para saber más: únete a nuestro Discord"
 soft_max_players = 50
 max_players = 50
+defaultpreset = "Extended"
 
 [console]
 # If this is true, people connecting from this machine (loopback)
