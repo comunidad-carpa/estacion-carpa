@@ -51,9 +51,14 @@ Servers:
         DOTNET_TC_QuickJitForLoops: 1
         DOTNET_ReadyToRun: 0
 
-      UpdateType: "Manifest"
+      # UpdateType: "Manifest"
+      # Updates:
+      #   ManifestUrl: "https://cdn.networkgamez.com/fork/goobstation/manifest"
+      UpdateType: "Git"
       Updates:
-        ManifestUrl: "https://cdn.networkgamez.com/fork/goobstation/manifest"
+        BaseUrl: "https://github.com/Goob-Station/Goob-Station"
+        Branch: "master"
+        HybridACZ: true
       TimeoutSeconds: 120
     # estacion_carpa_syndicate: # ID of your server.
     #   Name: "Estacion Carpa Syndicate" # Name of the server - Note that this is NOT the name of the server on the hub, that is set for each server under game.hostname in their respective config.toml files.
