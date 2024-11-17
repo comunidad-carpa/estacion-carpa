@@ -56,7 +56,7 @@ Servers:
       #   ManifestUrl: "https://cdn.networkgamez.com/fork/goobstation/manifest"
       UpdateType: "Git"
       Updates:
-        BaseUrl: "https://github.com/Goob-Station/Goob-Station"
+        BaseUrl: "https://github.com/comunidad-carpa/Goob-Station"
         Branch: "master"
         HybridACZ: true
       TimeoutSeconds: 120
